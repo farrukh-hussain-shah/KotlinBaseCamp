@@ -1,5 +1,6 @@
 package com.btech.kotlinbasecamp.base
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -47,6 +48,8 @@ abstract class BaseActivityM<VB : ViewBinding>(
             insets
         }
     }
+    fun Int.toPx(context: Context): Int =
+        (this * context.resources.displayMetrics.density).toInt()
 
     protected open fun setupViews() {}
     protected open fun setupListeners() {}

@@ -12,6 +12,8 @@ import com.btech.kotlinbasecamp.model.AppData
 class BottomCategorySelect :
     BaseBottomSheetDialogFragment<BottomAppSelectBinding>(BottomAppSelectBinding::inflate) {
     var onClick: ((AppData) -> Unit)? = null
+    private var appData: AppData? = null
+
     private val adapter by lazy { AppAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -32,9 +34,15 @@ class BottomCategorySelect :
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
         // item click
-        adapter.setOnItemClickListener { app, position ->
-            onClick?.invoke(app)
-            dismiss() // close sheet when selected
+        adapter.onClick = { app ->
+            appData = app
+        }
+
+        binding.topBar.tvEnd.setOnClickListener {
+            appData?.let {
+                onClick?.invoke(it)
+                dismiss()
+            }
         }
     }
 }

@@ -26,16 +26,6 @@ abstract class BaseBottomSheetDialogFragment<VB : ViewBinding>(
                 val bottomSheet =
                     (dialog as BottomSheetDialog)
                         .findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
-
-                bottomSheet?.let {
-                    // Set rounded background programmatically
-                    it.background =
-                        ContextCompat.getDrawable(requireContext(), R.drawable.bg_bottom_sheet)
-
-                    val behavior = BottomSheetBehavior.from(it)
-                    behavior.state = BottomSheetBehavior.STATE_EXPANDED
-                    behavior.skipCollapsed = true
-                }
             }
         }
     }

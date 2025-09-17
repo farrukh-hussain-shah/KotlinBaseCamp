@@ -25,9 +25,9 @@ abstract class BaseAdapter<T, VB : ViewBinding>(
                 bind(binding, item, pos)
 
                 // Attach click
-                binding.root.setOnClickListener {
-                    onItemClick?.invoke(item, pos)
-                }
+//                binding.root.setOnClickListener {
+//                    onItemClick?.invoke(item, pos)
+//                }
             }
         }
     }

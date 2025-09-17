@@ -11,13 +11,14 @@ import com.btech.kotlinbasecamp.model.AppData
 
 class BottomAppSelect :
     BaseBottomSheetDialogFragment<BottomAppSelectBinding>(BottomAppSelectBinding::inflate) {
+
     var onClick: ((AppData) -> Unit)? = null
+    private var appData: AppData? = null
     private val adapter by lazy { AppAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // sample list
         val listOfData = listOf(
             AppData(R.drawable.amazon, "Amazon"),
             AppData(R.drawable.apple, "Apple"),
@@ -26,16 +27,20 @@ class BottomAppSelect :
             AppData(R.drawable.wsj, "Wall Street Journal"),
         )
 
-        binding.recyclerView.adapter = adapter
-        adapter.setItems(listOfData)
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.recyclerView.adapter = adapter
+        adapter.setItems(listOfData)
 
-        // item click
-        adapter.setOnItemClickListener { app, position ->
-            app.isChecked = true
-            onClick?.invoke(app)
-            dismiss() // close sheet when selected
+        adapter.onClick = { app ->
+            appData = app
+        }
+
+        binding.topBar.tvEnd.setOnClickListener {
+            appData?.let {
+                onClick?.invoke(it)
+                dismiss()
+            }
         }
     }
 }
