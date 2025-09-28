@@ -10,8 +10,6 @@ abstract class BaseAdapter<T, VB : ViewBinding>(
 ) : RecyclerView.Adapter<BaseAdapter<T, VB>.BaseViewHolder>() {
 
     protected val items = mutableListOf<T>()
-
-    // 🔹 Click listener
     private var onItemClick: ((T, Int) -> Unit)? = null
 
     fun setOnItemClickListener(listener: (T, Int) -> Unit) {

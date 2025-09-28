@@ -3,16 +3,11 @@ package com.btech.kotlinbasecamp
 import android.os.Bundle
 import android.util.Log
 import androidx.core.content.ContextCompat
-import com.btech.kotlinbasecamp.base.BaseActivityM
-import com.btech.kotlinbasecamp.bottomsheets.BottomAmount
-import com.btech.kotlinbasecamp.bottomsheets.BottomAppSelect
-import com.btech.kotlinbasecamp.bottomsheets.BottomCategorySelect
-import com.btech.kotlinbasecamp.bottomsheets.BottomFrequencySelect
+import com.btech.kotlinbasecamp.base.BaseActivity
 import com.btech.kotlinbasecamp.bottomsheets.BottomStartDateSelect
 import com.btech.kotlinbasecamp.databinding.ActivityMainBinding
 
-class MainActivity : BaseActivityM<ActivityMainBinding>(ActivityMainBinding::inflate) {
-
+class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

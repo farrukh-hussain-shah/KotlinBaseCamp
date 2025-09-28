@@ -2,7 +2,6 @@ package com.btech.kotlinbasecamp.adapters
 
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.btech.kotlinbasecamp.base.BaseAdapter
 import com.btech.kotlinbasecamp.databinding.ItemFreequencySelectBinding
 import com.btech.kotlinbasecamp.model.AppData
 
