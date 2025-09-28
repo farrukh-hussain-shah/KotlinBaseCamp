@@ -32,5 +32,5 @@ We can include helpers such as:
 
 ```toast("Message")```
 
-**start<SecondActivity>()```
+```start<SecondActivity>()```
 This keeps the code cleaner inside each Activity or Fragment.
