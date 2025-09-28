@@ -3,8 +3,11 @@
 When building Android apps, you often repeat the same setup code across multiple Activities and Fragments. For example:
 
 Inflating views with ViewBinding
+
 Applying system window insets (edge-to-edge)
+
 Showing Toast messages
+
 Navigating between Activities
 
 Writing this boilerplate again and again is not only boring but also makes your code harder to maintain in large projects.
