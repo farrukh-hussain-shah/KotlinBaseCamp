@@ -30,7 +30,7 @@ UI handling (like padding for system bars) and helpers (like navigation or Toast
 **Extension Functions Inside Base**
 We can include helpers such as:
 
-**toast("Message")**
+```toast("Message")```
 
-**start<SecondActivity>()**
+**start<SecondActivity>()```
 This keeps the code cleaner inside each Activity or Fragment.
