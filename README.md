@@ -34,3 +34,12 @@ We can include helpers such as:
 
 ```start<SecondActivity>()```
 This keeps the code cleaner inside each Activity or Fragment.
+📚 I’ve published detailed resources here if you want to dive deeper:
+
+How BaseActivity works in Android (Kotlin)
+https://medium.com/@hussainfarrukh102/how-baseactivity-works-in-android-kotlin-66d0b0f5b98b 
+
+How BaseFragment works in Android (Kotlin)
+https://medium.com/@hussainfarrukh102/how-basefragment-works-in-android-kotlin-30fb3c6a62d6 
+
+GitHub Repo: KotlinBaseCamp
